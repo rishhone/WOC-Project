@@ -1,0 +1,51 @@
+.navbar-brand {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Lucida Sans';
+}
+
+body {
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Frontpage-img {
+  width: 40px;
+}
+.frontimg {
+  width: 200px;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.navbar {
+  border-radius: 30px;
+}
+
+
+.Frontpage-img {
+ display: grid;
+ grid-template-columns:1fr 1fr 1fr;
+}
+
+.webdes {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Monteserrat ;
+  margin-top: 30px;
+}
+
+.webabout {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 800 ;
+  font-size: large;
+}
+
+.logoname {
+  font-weight: bolder;
+}

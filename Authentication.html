@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/SignUp</title>
+  
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   
+</head>
+<body>
+
+
+  <nav>
+    <div class="nav-wrapper #bdbdbd grey lighten-1">
+      <a href="#" class="brand-logo center">Grafita</a>
+      <ul id="nav-mobile" class="left">
+        <li><a class="modal-trigger" href="#modal2">Login</a></li>
+        <li><a class="modal-trigger" href="#modal1">Signup</a></li>
+        <li><a onclick="logout()">LogOut</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <!-- sign up -->
+ <div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Sign Up</h4>
+   <form autocomplete="off" onsubmit="signup(event)">
+     <input type="email" id="signupEmail" placeholder="Email" />
+     <input type="password" id="signupPssword" placeholder="Password">
+    <button class="btn waves-effect" type="submit">Submit</button>
+   </form>
+   <button  class="btn waves-effect blue" onclick="loginWithGoogle()">Login with Google</button>
+  
+  </div>
+  
+</div>
+
+
+<!-- Log In -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h4>Log In</h4>
+   <form autocomplete="off" onsubmit="login(event)">
+     <input type="email" id="loginEmail" placeholder="Email" />
+     <input type="password" id="loginPassword" placeholder="Password">
+    <button class="btn waves-effect" type="submit">Submit</button>
+   </form>
+   <button  class="btn waves-effect blue" onclick="loginWithGoogle( )">Login with Google</button>
+  
+  </div>
+  
+</div>
+
+
+   <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+    </script>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBgd7GHJcJJoHM80CrupilDcFdhK-03zFQ",
+    authDomain: "grafita-aa973.firebaseapp.com",
+    projectId: "grafita-aa973",
+    storageBucket: "grafita-aa973.appspot.com",
+    messagingSenderId: "666199606106",
+    appId: "1:666199606106:web:79ebd58c18a977c95f2963"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./scripts/auth.js"></script>
+</body>
+</html>
